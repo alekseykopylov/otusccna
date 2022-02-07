@@ -85,3 +85,18 @@
   interface FastEthernet0/5  
   switchport mode trunk  
   
+### Настройка межвланного роутинга
+  R1:  
+  int g0/0/1  
+  no shut  
+  interface GigabitEthernet0/0/1.3  
+ encapsulation dot1Q 3  
+ ip address 192.168.3.1 255.255.255.0  
+!  
+interface GigabitEthernet0/0/1.4  
+ encapsulation dot1Q 4  
+ ip address 192.168.4.1 255.255.255.0  
+!  
+interface GigabitEthernet0/0/1.8  
+ encapsulation dot1Q 8  
+ no ip address  
