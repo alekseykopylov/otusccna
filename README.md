@@ -84,6 +84,8 @@
   S1:  
   interface FastEthernet0/5  
   switchport mode trunk  
+  switchport trunk native vlan 8  
+  
   
 ### Настройка межвланного роутинга
   R1:  
@@ -98,5 +100,5 @@ interface GigabitEthernet0/0/1.4
  ip address 192.168.4.1 255.255.255.0  
 !  
 interface GigabitEthernet0/0/1.8  
- encapsulation dot1Q 8  
+ encapsulation dot1Q 8 native  
  no ip address  
